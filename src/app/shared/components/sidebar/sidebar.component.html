@@ -5,7 +5,10 @@
     <div class="list-group list-reset">
 
         <button class="list-group-item list-group-item-action"
-                *ngFor="let tags of tagsList">
+                *ngFor="let tags of tagsList"
+                (click)="againList(tags)"
+                
+                >
             {{tags | titlecase}} 
         </button>
     </div>

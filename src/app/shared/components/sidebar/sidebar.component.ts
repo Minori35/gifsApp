@@ -12,11 +12,19 @@ export class SidebarComponent implements OnInit {
     
    }
 
-  constructor( private gifServices: GifsServices){}
+  constructor( private giftsService: GifsServices){}
 
+  againList(tag: any){
+    const newTag = tag;
+        this.giftsService.searchTag(newTag);
+        tag="";
+
+        console.log(newTag);
+    
+  }
 
   get tagsList(){
-    return this.gifServices.tagsHistory
+    return this.giftsService.tagsHistory
   }
 
   
