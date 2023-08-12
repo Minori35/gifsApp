@@ -1,7 +1,10 @@
 
     <div class="card mb-2 text-center bg-dark text-center">
 
-        <app-lazyimagen></app-lazyimagen>
+        <app-lazyimagen 
+            [url] = "gif.images.downsized_medium.url"
+            [alt]="gif.title || 'No name'"
+            ></app-lazyimagen>
          <!-- <img 
                 [src]="gif.images.downsized_medium.url"
                 [alt]="gif.title"
